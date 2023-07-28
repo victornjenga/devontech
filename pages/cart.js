@@ -30,7 +30,7 @@ const Cart = () => {
       <div className="flex flex-col items-center  justify-center">
         <button className="flex pt-4 text-center text-xl items-center font-bold">
           <span className="">Your Cart:</span>
-          <span className="">{totalQuantities} items</span>
+          <span className="">{totalQuantities} item</span>
         </button>
         {cartItems.length < 1 ? (
           <div className=" justify-center pb-10  items-center flex flex-col">
