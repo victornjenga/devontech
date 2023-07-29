@@ -41,13 +41,15 @@ function Navbar() {
   }
   return (
     <div>
-      <div className="hidden md:flex  justify-around items-center py-5 bg-blue-800">
+      <div className="hidden md:flex  justify-around items-center py-5 bg-blue-900">
         <div className="">
-          <img
-            className="w-[100%] h-[20%] object-contain"
-            src="/logo.png"
-            alt="/"
-          />
+          <Link href="/">
+            <img
+              className="w-[100%] h-[20%] object-contain"
+              src="/logo.png"
+              alt="/"
+            />
+          </Link>
         </div>
         <div className="flex space-x-5">
           <div onClick={toggleSubmenu} className="menu-item sub__menus__arrows">
@@ -55,32 +57,26 @@ function Navbar() {
               <div className="flex justify-center items-center">
                 <p className=" cursor-pointer font-semibold pr-2 text-white text-2xl ">
                   Mobiles
-                </p>{' '}
+                </p>
                 <FiChevronDown className="text-white text-3xl font-bold" />
               </div>
             </Link>
             <ul className={boxClassSubMenu.join(' ')}>
-              <div className=" bg-gray-100  space-y-2 text-left flex flex-col pb-4  justify-center pl-4 my-2  ">
-                <li className="flex  space-x-3 items-center ">
-                  <Link href="/abhishekhams">Abhishekams</Link>
+              <div className=" bg-gray-100  space-y-2 text-left flex flex-col   justify-center pl-4 my-2  ">
+                <li className="flex  space-x-3 items-center border-b border-gray-400 ">
+                  <Link href="/">Iphones</Link>
                 </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/archanas">Archanas</Link>
+                <li className="flex  space-x-3 items-center border-b border-gray-400 my-4">
+                  <Link href="/">Sumsung</Link>
                 </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/homams">Homams</Link>
+                <li className="flex  space-x-3 items-center border-b border-gray-400 my-4">
+                  <Link href="/">Xiomi</Link>
                 </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/other-poojas">Other Pujas</Link>
+                <li className="flex  space-x-3 items-center border-b border-gray-400 my-4">
+                  <Link href="/">Vivo</Link>
                 </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/pushpanjalis">Pushpanjalis</Link>
-                </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/poojas-for-children">Pujas for Children</Link>
-                </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/poojas-for-family">Pujas for Family</Link>
+                <li className="flex  space-x-3 items-center border-b border-gray-400 my-4">
+                  <Link href="/">Oppo</Link>
                 </li>
               </div>
             </ul>
@@ -95,15 +91,15 @@ function Navbar() {
               </div>
             </Link>
             <ul className={boxClassSubMenu.join(' ')}>
-              <div className=" bg-gray-100  space-y-2 text-left flex flex-col pb-4  justify-center pl-4 my-2  ">
-                <li className="flex  space-x-3 items-center ">
-                  <Link href="/temple-services">Temple Services</Link>
+              <div className=" bg-gray-100  space-y-2 text-left flex flex-col   justify-center pl-4 my-2  ">
+                <li className="flex  space-x-3 items-center border-b border-gray-400 ">
+                  <Link href="/temple-services">Sumsung</Link>
                 </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/community-services">Community Services</Link>
+                <li className="flex  space-x-3 items-center border-b border-gray-400 my-4">
+                  <Link href="/community-services">Nokia</Link>
                 </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/volunteer-opportunities">Volunteer Servics</Link>
+                <li className="flex  space-x-3 items-center border-b border-gray-400 my-4">
+                  <Link href="/volunteer-opportunities">Huawei</Link>
                 </li>
               </div>
             </ul>
@@ -118,15 +114,12 @@ function Navbar() {
               </div>
             </Link>
             <ul className={boxClassSubMenu.join(' ')}>
-              <div className=" bg-gray-100  space-y-2 text-left flex flex-col pb-4  justify-center pl-4 my-2  ">
-                <li className="flex  space-x-3 items-center ">
-                  <Link href="/temple-services">Temple Services</Link>
+              <div className=" bg-gray-100  space-y-2 text-left flex flex-col   justify-center pl-4 my-2  ">
+                <li className="flex  space-x-3 items-center border-b border-gray-400 ">
+                  <Link href="/temple-services">IOS16</Link>
                 </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/community-services">Community Services</Link>
-                </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/volunteer-opportunities">Volunteer Servics</Link>
+                <li className="flex  space-x-3 items-center border-b border-gray-400 my-4">
+                  <Link href="/community-services">IOS17</Link>
                 </li>
               </div>
             </ul>
@@ -141,15 +134,15 @@ function Navbar() {
               </div>
             </Link>
             <ul className={boxClassSubMenu.join(' ')}>
-              <div className=" bg-gray-100  space-y-2 text-left flex flex-col pb-4  justify-center pl-4 my-2  ">
-                <li className="flex  space-x-3 items-center ">
-                  <Link href="/temple-services">Temple Services</Link>
+              <div className=" bg-gray-100  space-y-2 text-left flex flex-col   justify-center pl-4 my-2  ">
+                <li className="flex  space-x-3 items-center border-b border-gray-400 ">
+                  <Link href="/temple-services">Watches</Link>
                 </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/community-services">Community Services</Link>
+                <li className="flex  space-x-3 items-center border-b border-gray-400 my-4">
+                  <Link href="/community-services">Power Banks</Link>
                 </li>
-                <li className="flex  space-x-3 items-center my-4">
-                  <Link href="/volunteer-opportunities">Volunteer Servics</Link>
+                <li className="flex  space-x-3 items-center border-b border-gray-400 my-4">
+                  <Link href="/volunteer-opportunities">Chargers</Link>
                 </li>
               </div>
             </ul>
@@ -166,16 +159,16 @@ function Navbar() {
             <BsHeart className="text-3xl font-bold text-gray-100" />
           </div>
           <div className="relative text-4xl  cursor-pointer">
-          <Link href="/cart">
-            <AiOutlineShoppingCart className="text-3xl font-bold text-gray-100" />
-            <span className="absolute top-0 right-[-4px] flex text-xs w-5 h-5 font-semibold text-white justify-center items-center rounded-full bg-red-700 ">
-              {totalQuantities}
-            </span>
+            <Link href="/cart">
+              <AiOutlineShoppingCart className="text-3xl font-bold text-gray-100" />
+              <span className="absolute top-0 right-[-4px] flex text-xs w-5 h-5 font-semibold text-white justify-center items-center rounded-full bg-red-700 ">
+                {totalQuantities}
+              </span>
             </Link>
           </div>
         </div>
       </div>
-      <div className="block md:hidden ">
+      <div className="block md:hidden  ">
         {/* <div className="h-[50px] bg-blue-700 justify-center space-x-3 text-white flex items-center ">
           <Link href="https://facebook.com">
             <div className="cursor-pointer items-center justify-center">
@@ -194,7 +187,6 @@ function Navbar() {
           </Link>
         </div> */}
 
-        
         {/* <div className="flex  justify-around bg-blue-700 text-white ">
           <Link href="/">
             <Image
@@ -206,7 +198,6 @@ function Navbar() {
             />
           </Link>
         </div> */}
-
 
         <div className="flex spa hover:text-red-600ce-x-3 items-center  px-4 py-2 bg-blue-800 text-white ">
           <BsSearch className="text-red-600 text-2xl" />

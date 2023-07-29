@@ -27,9 +27,9 @@ function Bottom() {
       <p className="text-2xl w-[80%] py-5 font-bold">
         I agree to receive product information and special promotional offers by
         email from DevonTech,and I confirm that I am 16 years of age or older.
-        Privacy Policy I agree to receive product information and special
+       <span className="text-blue-800">Privacy Policy</span> I agree to receive product information and special
         promotional offers by email from DevonTech, and I confirm that I am 16
-        years of age or older. Privacy Policy
+        years of age or older. <span className="text-blue-800">Privacy Policy</span>
       </p>
     </div>
   )
