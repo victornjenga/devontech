@@ -92,7 +92,7 @@ function ProductDetails({ siteDetails, sites }) {
                 {site.name}
               </h3>
               <div className="flex space-x-2   items-center py-3">
-                <div className="bg-red-600 hidden md:flex h-full p-2">
+                <div className="bg-blue-600 hidden md:flex h-full p-2">
                   <TbMessageCircle2Filled className=" text-xl md:text-2xl text-white  " />
                 </div>
 
@@ -145,7 +145,7 @@ function ProductDetails({ siteDetails, sites }) {
                 <button
                   type="button"
                   onClick={() => onAdd(site, qty)}
-                  className="px-3 py-2  bg-red-600 border cursor-pointer text-white font-semibold  hover:scale-105 duration-300"
+                  className="px-3 py-2  bg-blue-600 border cursor-pointer text-white font-semibold  hover:scale-105 duration-300"
                 >
                   Add To Cart
                 </button>
@@ -168,7 +168,7 @@ function ProductDetails({ siteDetails, sites }) {
                     onClick={() => handleButtonClick('option1')}
                     style={{
                       backgroundColor:
-                        selectedOption === 'option1' ? 'red' : 'black',
+                        selectedOption === 'option1' ? 'blue' : 'black',
                       color: selectedOption === 'option1' ? 'white' : 'white',
                     }}
                     className="bg-black text-white px-2 py-1 font-medium "
@@ -179,7 +179,7 @@ function ProductDetails({ siteDetails, sites }) {
                     onClick={() => handleButtonClick('option2')}
                     style={{
                       backgroundColor:
-                        selectedOption === 'option2' ? 'red' : 'black',
+                        selectedOption === 'option2' ? 'blue' : 'black',
                       color: selectedOption === 'option1' ? 'white' : 'white',
                     }}
                     className="bg-black text-white px-2 py-1 font-medium "
@@ -190,7 +190,7 @@ function ProductDetails({ siteDetails, sites }) {
                     onClick={() => handleButtonClick('option3')}
                     style={{
                       backgroundColor:
-                        selectedOption === 'option3' ? 'red' : 'black',
+                        selectedOption === 'option3' ? 'blue' : 'black',
                       color: selectedOption === 'option1' ? 'white' : 'white',
                     }}
                     className="bg-black text-white px-2 py-1 font-medium "
@@ -201,7 +201,7 @@ function ProductDetails({ siteDetails, sites }) {
                     onClick={() => handleButtonClick('option4')}
                     style={{
                       backgroundColor:
-                        selectedOption === 'option4' ? 'red' : 'black',
+                        selectedOption === 'option4' ? 'blue' : 'black',
                       color: selectedOption === 'option1' ? 'white' : 'white',
                     }}
                     className="bg-black text-white px-2 py-1 font-medium "
@@ -212,7 +212,7 @@ function ProductDetails({ siteDetails, sites }) {
                     onClick={() => handleButtonClick('option5')}
                     style={{
                       backgroundColor:
-                        selectedOption === 'option5' ? 'red' : 'black',
+                        selectedOption === 'option5' ? 'blue' : 'black',
                       color: selectedOption === 'option1' ? 'white' : 'white',
                     }}
                     className="bg-black text-white px-2 py-1 font-medium "
@@ -254,7 +254,7 @@ function ProductDetails({ siteDetails, sites }) {
         <button
           type="button"
           onClick={() => onAdd(site, qty)}
-          className="px-3 py-2 bg-red-600 cursor-pointer text-white font-semibold  w-[50%]"
+          className="px-3 py-2 bg-blue-600 cursor-pointer text-white font-semibold  w-[50%]"
         >
           ADD TO CART
         </button>

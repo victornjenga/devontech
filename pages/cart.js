@@ -22,15 +22,13 @@ const Cart = () => {
     onRemove,
   } = useStateContext()
 
-  
 
-  
   return (
-    <div className="pt-10 w-full justify-center items-center" ref={cartRef}>
+    <div className=" w-full justify-center items-center" ref={cartRef}>
       <div className="flex flex-col items-center  justify-center">
         <button className="flex pt-4 text-center text-xl items-center font-bold">
           <span className="">Your Cart:</span>
-          <span className="">{totalQuantities} item</span>
+          <span className="">{totalQuantities} items</span>
         </button>
         {cartItems.length < 1 ? (
           <div className=" justify-center pb-10  items-center flex flex-col">
@@ -46,13 +44,13 @@ const Cart = () => {
             </Link>
           </div>
         ) : (
-          <div className="flex space-y-1   flex-col items-center justify-center">
+          <div className="flex space-y-1 w-full  flex-col items-center justify-center">
             {cartItems.map((item) => (
               <div
-                className="block px-3 bg-gray-100 py-2 mt-4 space-x-2 md:w-[70%] items-center justify-center"
+                className="block px-3 bg-gray-100 py-2 mt-4 space-x-2 md:w-[50%] items-center justify-center"
                 key={item._id}
               >
-                <div className="grid   grid-cols-3 space-x-2  pt-4 items-center justify-center">
+                <div className="grid  grid-cols-3 space-x-2  pt-4 items-center justify-center">
                   <div>
                     <img
                       src={urlFor(item?.image[0])}
@@ -66,7 +64,7 @@ const Cart = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-lg md:text-xl">
-                    {item?.price}
+                 {item?.price}
                     </h4>
                   </div>
                 </div>
@@ -106,7 +104,7 @@ const Cart = () => {
         <div className="pt-4 pb-10 bottom-4 w-full  justify-center items-center flex- flex-col">
           <div className="flex text-2xl font-bold justify-around">
             <h3>Subtotal:</h3>
-            <h3>{totalPrice}</h3>
+            <h3>Ksh {totalPrice}</h3>
           </div>
           <div className="flex pt-3 items-center justify-center">
             <Link href="/checkout">

@@ -40,33 +40,33 @@ export default function Home({ sites }) {
         Latest Products
       </h2>
 
-
       <div className="relative hidden md:flex group items-center">
-          <MdChevronLeft
-            onClick={slideLeft}
-            size={40}
-            className="bg-white absolute text-black font-bold cursor-pointer z-10  rounded-full hidden group-hover:block opacity-40 hover:opacity-100"
-          />
-          <div id="slider" className="flex  w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative">
-            {sites.slice(0, 5).map((site) => (
-              <Products key={site._id} site={site} />
-            ))}
-          </div>
-          <MdChevronRight
-            onClick={slideRight}
-            size={40}
-            className="bg-white right-0 absolute text-black font-bold cursor-pointer z-10  rounded-full hidden group-hover:block opacity-40 hover:opacity-100"
-          />
-        </div>
-
-<h2 className='text-2xl font-bold pt-4 md:px-4'>New Products
-</h2>
-        <div className="flex pt-2 flex-wrap  w-full">
-          {sites.slice(5, 9).map((site) => (
-            <NewProducts key={site._id} site={site} />
+        <MdChevronLeft
+          onClick={slideLeft}
+          size={40}
+          className="bg-white absolute text-black font-bold cursor-pointer z-10  rounded-full hidden group-hover:block opacity-40 hover:opacity-100"
+        />
+        <div
+          id="slider"
+          className="flex  w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative"
+        >
+          {sites.slice(0, 5).map((site) => (
+            <Products key={site._id} site={site} />
           ))}
         </div>
+        <MdChevronRight
+          onClick={slideRight}
+          size={40}
+          className="bg-white right-0 absolute text-black font-bold cursor-pointer z-10  rounded-full hidden group-hover:block opacity-40 hover:opacity-100"
+        />
+      </div>
 
+      <h2 className="text-2xl font-bold pt-4 md:px-4">New Products</h2>
+      <div className="flex pt-2 flex-wrap  w-full">
+        {sites.slice(5, 9).map((site) => (
+          <NewProducts key={site._id} site={site} />
+        ))}
+      </div>
 
       <Bottom />
     </main>
