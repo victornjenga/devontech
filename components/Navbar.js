@@ -226,7 +226,7 @@ function Navbar() {
         </div> */}
         {isVisible && (
           <div id="hide">
-            <div className="py-1 bg-blue-700 px-3 flex justify-between items-center">
+            <div className="py-1 bg-blue-800 px-3 flex justify-between items-center">
               <Link href="/">
                 <h2 className="font-bold italic text-white ">Devontech</h2>
               </Link>

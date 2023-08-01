@@ -27,7 +27,7 @@ export default function Home({ sites }) {
         <Discover />
       </div>
 
-      <div className=" pt-2 md:pt-4 space-x-3 hidden md:flex overflow-x-scroll py-2 scrollbar-hide mx-4">
+      <div className=" pt-2 md:pt-4 space-x-3 flex overflow-x-scroll py-2 scrollbar-hide mx-4">
         {categories.length ? (
           categories?.map((category) => (
             <Categories key={category.id} category={category} />
@@ -40,26 +40,24 @@ export default function Home({ sites }) {
         Latest Products
       </h2>
 
-      <div className="relative hidden md:flex group items-center">
-        <MdChevronLeft
-          onClick={slideLeft}
-          size={40}
-          className="bg-white absolute text-black font-bold cursor-pointer z-10  rounded-full hidden group-hover:block opacity-40 hover:opacity-100"
-        />
-        <div
-          id="slider"
-          className="flex  overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative"
-        >
-          {sites.slice(0, 5).map((site) => (
-            <Products key={site._id} site={site} />
-          ))}
+      <div className="relative flex group items-center">
+          <MdChevronLeft
+            onClick={slideLeft}
+            size={40}
+            className="bg-white absolute text-black font-bold cursor-pointer z-10  rounded-full hidden group-hover:block opacity-40 hover:opacity-100"
+          />
+          <div id="slider" className="flex  w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative">
+            {sites.slice(0, 10).map((site) => (
+              <Products key={site._id} site={site} />
+            ))}
+          </div>
+          <MdChevronRight
+            onClick={slideRight}
+            size={40}
+            className="bg-white right-0 absolute text-black font-bold cursor-pointer z-10  rounded-full hidden group-hover:block opacity-40 hover:opacity-100"
+          />
         </div>
-        <MdChevronRight
-          onClick={slideRight}
-          size={40}
-          className="bg-white right-0 absolute text-black font-bold cursor-pointer z-10  rounded-full hidden group-hover:block opacity-40 hover:opacity-100"
-        />
-      </div>
+
 
       <h2 className="text-2xl font-bold pt-4 md:px-4">New Products</h2>
       <div className="flex pt-2 flex-wrap  w-full">
