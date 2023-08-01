@@ -22,12 +22,12 @@ export default function Home({ sites }) {
   }
 
   return (
-    <main className="md:px-[5%] pt-8 w-full">
+    <main className="md:px-[5%] pt-36 md:pt-24 w-full">
       <div className=" pt-2 md:pt-4 md:hidden overflow-x-scroll py-2 scrollbar-hide mx-4">
         <Discover />
       </div>
 
-      <div className=" pt-2 md:pt-4 space-x-3 hidden md:flex overflow-x-scroll   py-2 scrollbar-hide mx-4">
+      <div className=" pt-2 md:pt-4 space-x-3 hidden md:flex overflow-x-scroll py-2 scrollbar-hide mx-4">
         {categories.length ? (
           categories?.map((category) => (
             <Categories key={category.id} category={category} />
@@ -48,7 +48,7 @@ export default function Home({ sites }) {
         />
         <div
           id="slider"
-          className="flex  w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative"
+          className="flex  overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative"
         >
           {sites.slice(0, 5).map((site) => (
             <Products key={site._id} site={site} />

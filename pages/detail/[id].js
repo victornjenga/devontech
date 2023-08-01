@@ -63,7 +63,7 @@ function ProductDetails({ siteDetails, sites }) {
           white-space: pre-line;
         }`}
       </style>
-      <div className="w-full p-8  h-full bg-white justify-center  pt-16 rounded">
+      <div className="w-full p-8  h-full bg-white justify-center  pt-10 rounded">
         <h3 className="font-medium md:hidden text-xl">{site.name}</h3>
         <div className="flex flex-col  md:px-8 w-full justify-center  items-center pb-8 xl:flex-row">
           <div className="block space-x-3 md:flex  w-full ">

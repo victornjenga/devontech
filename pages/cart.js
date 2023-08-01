@@ -24,7 +24,7 @@ const Cart = () => {
 
 
   return (
-    <div className=" w-full justify-center items-center" ref={cartRef}>
+    <div className=" w-full pt-24 justify-center items-center" ref={cartRef}>
       <div className="flex flex-col items-center  justify-center">
         <button className="flex pt-4 text-center text-xl items-center font-bold">
           <span className="">Your Cart:</span>

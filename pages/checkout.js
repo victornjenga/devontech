@@ -123,7 +123,7 @@ export default function App() {
   }
 
   return (
-    <div className="flex relative justify-center items-center z-0 flex-col">
+    <div className="flex pt-24 relative justify-center items-center z-0 flex-col">
       <div className=" px-10  rounded-2xl  my-6 justify-center items-center  flex flex-col">
         <h1 className="text-xl font-semibold flex p-2">
           Pay

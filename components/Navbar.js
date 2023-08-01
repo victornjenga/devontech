@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Logo from '../public/logo.png'
 import Link from 'next/link'
@@ -7,7 +7,13 @@ import { useStateContext } from '../context/StateContext'
 import { BsSearch, BsFillPersonFill, BsHeart } from 'react-icons/bs'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { PiShoppingCartSimpleFill } from 'react-icons/pi'
-import { FaSquareFacebook, FaTwitterSquare } from 'react-icons/fa'
+import {
+  FaSquareFacebook,
+  FaTwitterSquare,
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+} from 'react-icons/fa'
 import { TiSocialInstagram } from 'react-icons/ti'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 
@@ -16,7 +22,8 @@ function Navbar() {
   const [isMenu, setisMenu] = useState(false)
   const [open, setOpen] = useState()
   const [isResponsiveclose, setResponsiveclose] = useState(false)
-
+  const [isVisible, setIsVisible] = useState(true)
+  const [height, setHeight] = useState(0)
   const { showCart, setShowCart, totalQuantities } = useStateContext()
 
   const toggleClass = () => {
@@ -39,13 +46,32 @@ function Navbar() {
   } else {
     boxClassSubMenu.push('')
   }
+
+  useEffect(() => {
+    window.addEventListener('scroll', listenToScroll)
+    return () => window.removeEventListener('scroll', listenToScroll)
+  }, [])
+
+  const listenToScroll = () => {
+    let heightToHideFrom = 100
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop
+    setHeight(winScroll)
+
+    if (winScroll > heightToHideFrom) {
+      isVisible && setIsVisible(false)
+    } else {
+      setIsVisible(true)
+    }
+  }
+
   return (
-    <div>
+    <div className="fixed  w-full z-20">
       <div className="hidden md:flex  justify-around items-center py-5 bg-blue-900">
         <div className="">
           <Link href="/">
             <img
-              className="w-[100%] h-[20%] object-contain"
+              className="w-[80px]"
               src="/logo.png"
               alt="/"
             />
@@ -161,7 +187,7 @@ function Navbar() {
           <div className="relative text-4xl  cursor-pointer">
             <Link href="/cart">
               <AiOutlineShoppingCart className="text-3xl font-bold text-gray-100" />
-              <span className="absolute top-0 right-[-4px] flex text-xs w-5 h-5 font-semibold text-white justify-center items-center rounded-full bg-red-700 ">
+              <span className="absolute top-0 right-[-6px] flex text-xs w-5 h-5 font-semibold text-white justify-center items-center rounded-full bg-red-700 ">
                 {totalQuantities}
               </span>
             </Link>
@@ -198,18 +224,55 @@ function Navbar() {
             />
           </Link>
         </div> */}
-
-        <div className="flex spa hover:text-red-600ce-x-3 items-center  px-4 py-2 bg-blue-800 text-white ">
-          <BsSearch className="text-red-600 text-2xl" />
-          {/* <p className="">Search For Products</p> */}
-          <Link href="/mobile-search">
-            <input
-              placeholder="Search For Products"
-              type="text"
-              className="outline-none text-white bg-blue-800"
-            />
-          </Link>
-        </div>
+        {isVisible && (
+          <div id="hide">
+            <div className="py-1 bg-blue-700 px-3 flex justify-between items-center">
+              <Link href="/">
+                <h2 className="font-bold italic text-white ">Devontech</h2>
+              </Link>
+              <div className="flex space-x-3 py-3">
+                <a
+                  href="https://facebook.com/civrotke/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className=" cursor-pointer  justify-center items-center flex   ">
+                    <FaFacebookF className="text-white text-lg " />
+                  </div>
+                </a>{' '}
+                <a
+                  href="https://twitter.com/civrotweb"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className=" cursor-pointer  justify-center items-center flex   ">
+                    <FaTwitter className="text-white text-lg " />
+                  </div>
+                </a>{' '}
+                <a
+                  href="https://www.instagram.com/civrot_web_services/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className=" cursor-pointer  justify-center items-center flex   ">
+                    <FaInstagram className="text-white text-lg " />
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div className="flex spa hover:text-red-600ce-x-3 items-center  px-4 py-2 bg-blue-800 text-white ">
+              <BsSearch className="text-red-600 text-2xl" />
+              {/* <p className="">Search For Products</p> */}
+              <Link href="/mobile-search">
+                <input
+                  placeholder="Search For Products"
+                  type="text"
+                  className="outline-none text-white bg-blue-800"
+                />
+              </Link>
+            </div>
+          </div>
+        )}
 
         <div className="flex justify-between px-2  lg:px-5 items-center bg-gray-100 text-blue-700 ">
           <div>

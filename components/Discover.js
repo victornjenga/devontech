@@ -13,7 +13,7 @@ function Discover() {
         Popular Categories
       </p>
        */}
-      <div className=" justify-start flex space-x-5  ">
+      <div className=" justify-start flex space-x-5">
         {categories?.map((item) => (
           <Link href={`/?category=${item.name}`} key={item.name}>
             <div>
