@@ -25,8 +25,8 @@ function Products({ site }) {
 
   const router = useRouter()
   return (
-    <div className="w-[200px] md:w-[300px] px-2 md:px-4 pt-8">
-      <div className="flex flex-col w-[200px] md:w-[200px] relative px-3 py-2  h-full justify-center  rounded-md border border-gray-300 cursor-pointer hover:bg-gray-100 hover:border-gray-200 bg-white">
+    <div className="w-[50%] md:w-[25%] px-2 md:px-4 pt-8">
+      <div className="flex flex-col w-[200px] md:w-[200px] relative px-3 py-2  h-full justify-center  rounded-md border border-gray-300 cursor-pointer  hover:border-gray-200 bg-white">
         <p className="truncate line-clamp-1 ">{category}</p>
         <p className="truncate line-clamp-1 font-bold text-lg text-blue-700 ">
           {name}

@@ -293,10 +293,12 @@ function Navbar() {
             )}
           </div>
           <div className="  rounded-3xl relative pl-8 pr-3 py-2 flex justify-center items-center space-x-3">
-            <PiShoppingCartSimpleFill
-              onClick={() => router.push('/cart')}
+            <Link href="/cart">
+               <PiShoppingCartSimpleFill
               className="cursor-pointer relative text-2xl"
             />
+            </Link>
+           
             <span className="absolute top-0 right-0 flex text-xs w-5 h-5 font-semibold text-white justify-center items-center rounded-full bg-red-700">
               {totalQuantities}
             </span>
